@@ -7,7 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/b6c1befcd7.js" crossorigin="anonymous"></script>
     <title>My portfolio</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -57,21 +57,21 @@
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="images/image_1.png" class="d-block w-100" alt="...">
+                    <img src="assets/images/image_1.png" class="d-block w-100" alt="...">
                     <div class="carousel-caption-hack carousel-caption d-none d-md-block">
                         <h5><a href="">First slide label</a></h5>
 
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="images/image_2.png" class="d-block w-100" alt="...">
+                    <img src="assets/images/image_2.png" class="d-block w-100" alt="...">
                     <div class="carousel-caption-hack carousel-caption d-none d-md-block">
                         <h5><a href="">Second slide label</a></h5>
 
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="images/2.jpg" class="d-block w-100" alt="...">
+                    <img src="assets/images/2.jpg" class="d-block w-100" alt="...">
                     <div class="carousel-caption-hack carousel-caption d-none d-md-block">
                         <h5><a href="">Third slide label</a></h5>
 
@@ -97,7 +97,7 @@
                 <h2>Последние публикация</h2>
                 <div class="post row">
                     <div class="img col-12 col-md-4">
-                        <img src="images/image_small.png" alt="" class="img-thumbnail">
+                        <img src="assets/images/image_small.png" alt="" class="img-thumbnail">
                     </div>
                     <div class="post_text col-12 col-md-8">
                         <h3>
@@ -113,7 +113,7 @@
                 </div>
                 <div class="post row">
                     <div class="img col-12 col-md-4">
-                        <img src="images/image_small.png" alt="" class="img-thumbnail">
+                        <img src="assets/images/image_small.png" alt="" class="img-thumbnail">
                     </div>
                     <div class="post_text col-12 col-md-8">
                         <h3>
