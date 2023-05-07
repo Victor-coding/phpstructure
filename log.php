@@ -1,14 +1,8 @@
-<!doctype html>
-<html lang="en">
-<?php
-include_once "app/include/head.php";
-?>
-<body>
-<!-- header -->
+
 <?php
 include_once "app/include/header.php";
 ?>
-<!-- header end -->
+
 
 <!-- form -->
 <div class="container reg_form">
@@ -33,14 +27,6 @@ include_once "app/include/header.php";
 </div>
 <!-- form end -->
 
-<!-- footer -->
 <?php
 include_once "app/include/footer.php";
 ?>
-<!-- footer end -->
-
-
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
-</body>
-</html>
