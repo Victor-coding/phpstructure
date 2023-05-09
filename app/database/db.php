@@ -77,7 +77,7 @@ function selectOne($table, $params = [])
     return $query->fetch();
 }
 // Запись в таблицу БД
-function insert($table,$configureTable, $param)
+function insert($table, $configureTable, $param)
 {
     global $pdo;
     $i = 0;
@@ -102,6 +102,7 @@ function insert($table,$configureTable, $param)
     $query = $pdo->prepare($sql);
     $query->execute($param);
     dbCheckError($query);
+    return $pdo->lastInsertId();
 
 }
 // Обновление строки в таблице

@@ -18,7 +18,7 @@
             <div class="row">
                 <div class="col-4">
                     <h1>
-                        <a href="<?php echo BASE_URL?>">My portfolio</a>
+                        <a href="/">My portfolio</a>
                     </h1>
                 </div>
                 <nav class="col-8">

@@ -329,3 +329,8 @@ footer .contact-form button{
     margin-left: 55px;
     transition: all .3s;
 }
+form div.err p{
+    color: red;
+    font-style: italic;
+    font-size: 0.8rem;
+}
