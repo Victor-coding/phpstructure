@@ -2,8 +2,9 @@
 include_once "app/database/db.php";
 include_once "app/database/tableConfiguration.php";
 
-$isSubmit = false;
+
 $errMsg = '';
+
 if($_SERVER['REQUEST_METHOD'] === 'POST'){
     $admin = 0;
     $login = trim($_POST['login']);
@@ -19,16 +20,24 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
     }elseif ($passF !== $passS){
         $errMsg = "Пароли в обоих полях должны соответствовать!";
     }
+
     else{
-        $pass = password_hash($passF, PASSWORD_DEFAULT);
-        $post = [
-            ':adm' => $admin,
-            ':log' => $login,
-            ':mail' => $email,
-            ':pass' => $passF
-        ];
-        $isSubmit = true;
-        insert('users', $tableUsers, $post);
+        $existence = selectOne('users', ['email' => $email]);
+        if (!empty($existence['email']) && $existence['email'] === $email){
+            $errMsg = "Пользователь с такой почтой уже зарегистрирован!";
+        }else {
+            $pass = password_hash($passF, PASSWORD_DEFAULT);
+            $post = [
+                ':adm' => $admin,
+                ':log' => $login,
+                ':mail' => $email,
+                ':pass' => $passF
+            ];
+            $isSubmit = true;
+            insert('users', $tableUsers, $post);
+
+            $errMsg = "Пользователь " . "<strong>" . $login . "</strong>" . " успешно зарегистрирован!";
+        }
     }
 
 
