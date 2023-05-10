@@ -34,9 +34,19 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
                 ':pass' => $passF
             ];
             $isSubmit = true;
-            insert('users', $tableUsers, $post);
+            $id =insert('users', $tableUsers, $post);
+            $user = selectOne('users', ['id' => $id]);
+           // $errMsg = "Пользователь " . "<strong>" . $login . "</strong>" . " успешно зарегистрирован!";
+            $_SESSION['id'] = $user['id'];
+            $_SESSION['login'] = $user['username'];
+            $_SESSION['admin'] = $user['admin'];
+            if($_SESSION['admin']){
+                header('location: ' . '/admin/admin.php');
+            }else{
+            header('location: ' . '/');
+            }
 
-            $errMsg = "Пользователь " . "<strong>" . $login . "</strong>" . " успешно зарегистрирован!";
+
         }
     }
 

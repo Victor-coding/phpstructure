@@ -1,6 +1,8 @@
 
 <?php
+include_once "app/database/db.php";
 include_once "app/include/header.php";
+
 ?>
 
     <!-- блок карусели -->
