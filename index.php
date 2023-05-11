@@ -8,6 +8,7 @@ include_once "app/include/header.php";
     <!-- блок карусели -->
     <div class="container">
         <div class="row">
+            <?php if (!empty($_SESSION['isTheUserBanned'])) echo $_SESSION['isTheUserBanned']; ?>
             <h2 class="slider-title">Топ публикации</h2>
         </div>
         <div id="carouselExampleCaptions" class="carousel slide">
