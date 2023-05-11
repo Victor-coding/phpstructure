@@ -36,7 +36,7 @@ include_once "app/include/header.php";
             <div class="w-100"></div>
             <div class="mb-3 col-12 col-md-4">
                 <button type="submit" class="btn btn-secondary" name="button-reg">Регистрация</button>
-                <a href="/aut.html">Войти</a>
+                <a href="/log.php">Войти</a>
             </div>
 
         </form>
