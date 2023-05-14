@@ -8,7 +8,7 @@ function userAuth($user){
     $_SESSION['admin'] = $user['admin'];
 
     if($_SESSION['admin']){
-        header('location: ' . '/admin/admin.php');
+        header('location: ' . '/admin/posts/index.php');
     }else{
         header('location: ' . '/');
     }
@@ -33,10 +33,10 @@ function isTheUserBanned():string{
             $_SESSION['isTheUserBanned'] = 1;
             return '<p>Вы слишком много раз пытались ввести пароль. Попробуйте еще через 5 минут</p>';
         }else{
-            $_SESSION['numOfAttempts'] = 0;
-            $_SESSION['timeAuth'] = 0;
-            $_SESSION['mail'] = '';
-            $_SESSION['isTheUserBanned'] = 0;
+            unset($_SESSION['numOfAttempts']);
+            unset($_SESSION['timeAuth']);
+            unset($_SESSION['mail']);
+            unset($_SESSION['isTheUserBanned']);
             return '';
         }
     }else{
