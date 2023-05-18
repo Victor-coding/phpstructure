@@ -6,4 +6,9 @@ $tableUsers = [
     'email' => ':mail',
     'password' => ':pass'
 ];
+$tableTopics = [
+    'name' => ':nm',
+    'description' => ':desc'
+
+];
 

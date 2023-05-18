@@ -1,6 +1,8 @@
 
 <?php
+include_once 'path.php';
 include_once "app/database/db.php";
+include_once "app/controllers/topics.php";
 include_once "app/include/header.php";
 
 ?>
@@ -102,11 +104,10 @@ include_once "app/include/header.php";
                 <div class="section topics">
                     <h3>Категории</h3>
                     <ul>
-                        <li><a href="#">Програмирование</a></li>
-                        <li><a href="#">Дизайн</a></li>
-                        <li><a href="#">Визуализация</a></li>
-                        <li><a href="#">Кейсы</a></li>
-                        <li><a href="#">Мотивация</a></li>
+                        <?php foreach ($topics as $topic):?>
+                            <li><a href="#"><?=$topic['name']?></a></li>
+                        <?php endforeach; ?>
+
                     </ul>
                 </div>
 

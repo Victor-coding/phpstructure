@@ -16,13 +16,14 @@ include_once "../../app/include/header-admin.php";
                 <a href="index.php " class="col-3 btn btn-warning">Редактировать</a>
             </div>
             <div class="row title-table">
-                <h2>Создать категорию</h2>
+                <h2>Редактирование</h2>
             </div>
             <div class="mb-3 col-12 col-md-4 err">
                 <p><?=$errMsg?></p>
             </div>
             <div class="row add-post">
-                <form action="create.php" method="post">
+                <form action="edit.php" method="post">
+                    <input name="id" value="<?=$id?>" type="hidden">
                     <div class="col">
                         <input name="name" value="<?=$name?>" type="text" class="form-control" placeholder="Имя категории" aria-label="Имя категории">
                     </div>
@@ -32,7 +33,7 @@ include_once "../../app/include/header-admin.php";
                     </div>
 
                     <div class="col">
-                        <button name="topic-create" class="btn btn-primary" type="submit">Создать категорию</button>
+                        <button name="topic-edit" class="btn btn-primary" type="submit">Обновить</button>
                     </div>
 
                 </form>
@@ -47,5 +48,6 @@ include_once "../../app/include/header-admin.php";
 <?php
 include_once "../../app/include/footer.php";
 ?>
+
 
 

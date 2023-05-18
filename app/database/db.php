@@ -8,6 +8,7 @@ function debug($data)
     echo '<pre>';
     print_r($data);
     echo '</pre>';
+    exit();
 }
 
 // Проверка выполнения запроса к БД
@@ -108,28 +109,28 @@ function insert($table, $configureTable, $param)
 
 }
 // Обновление строки в таблице
-function update($table,$id, $params)
+function update($table,$id, $params, $configureTable)
 {
     global $pdo;
     $i = 0;
     $str = '';
 
-    foreach ($params as $key => $value)
+    foreach ($configureTable as $key => $value)
     {
         if ($i === 0)
         {
-            $str = $str . $key . " = '" . $value . "'";
+            $str = $str . $key . " = " . $value;
         }
         else
         {
-            $str = $str . ", " . $key . " = '" . $value . "'";
+            $str = $str . ", " . $key . " = " . $value;
         }
         $i++;
     }
 
     $sql = "UPDATE $table SET $str WHERE id = $id";
     $query = $pdo->prepare($sql);
-    $query->execute();
+    $query->execute($params);
     dbCheckError($query);
 }
 // Удаление строки в таблице

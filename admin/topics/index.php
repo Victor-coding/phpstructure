@@ -1,6 +1,7 @@
 <?php
 
-include_once "../../app/database/db.php";
+include_once '../../path.php';
+include_once "../../app/controllers/topics.php";
 include_once "../../app/include/header-admin.php";
 
 ?>
@@ -23,19 +24,14 @@ include_once "../../app/include/header-admin.php";
                 <div class="col-4">Управление</div>
 
             </div>
+            <?php foreach ($topics as $key => $topic):?>
             <div class="row post">
-                <div class="id col-1">1</div>
-                <div class="title col-5">Путешествие</div>
-                <div class="red col-2"><a href="">edit</a></div>
-                <div class="del col-2"><a href="">delete</a></div>
+                <div class="id col-1"><?=$key + 1?></div>
+                <div class="title col-5"><?=$topic['name']?></div>
+                <div class="red col-2"><a href="edit.php?id=<?=$topic['id'];?>">edit</a></div>
+                <div class="del col-2"><a href="edit.php?del_id=<?=$topic['id'];?>">delete</a></div>
             </div>
-            <div class="row post">
-                <div class="id col-1">1</div>
-                <div class="title col-5">Програмирование</div>
-
-                <div class="red col-2"><a href="">edit</a></div>
-                <div class="del col-2"><a href="">delete</a></div>
-            </div>
+            <?php endforeach; ?>
 
 
         </div>
