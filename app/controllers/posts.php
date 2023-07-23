@@ -74,7 +74,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['post-edit'])){
             ];
 
 
-            update('topics', $id, $topic, $tableTopics);
+            update('topics', $id, $post, $tablePosts);
             $topic_id = selectOne('users', ['id' => $id]);
             header('location: ' . '/admin/topics/index.php');
 
