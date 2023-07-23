@@ -1,6 +1,7 @@
 <?php
 
-include_once "../../app/database/db.php";
+include_once '../../path.php';
+include_once "../../app/controllers/posts.php";
 include_once "../../app/include/header-admin.php";
 
 ?>
@@ -21,24 +22,17 @@ include_once "../../app/include/header-admin.php";
                     <div class="col-5">Название</div>
                     <div class="col-2">Автор</div>
                     <div class="col-4">Управление</div>
-
                 </div>
-                <div class="row post">
-                    <div class="id col-1">1</div>
-                    <div class="title col-5">Название ggggghjdhgjgh</div>
-                    <div class="author col-2">Автор admin</div>
-                    <div class="red col-2"><a href="">edit</a></div>
-                    <div class="del col-2"><a href="">delete</a></div>
-                </div>
-                <div class="row post">
-                    <div class="id col-1">1</div>
-                    <div class="title col-5">Название ggggghjdhgjgh</div>
-                    <div class="author col-2">Автор admin</div>
-                    <div class="red col-2"><a href="">edit</a></div>
-                    <div class="del col-2"><a href="">delete</a></div>
-                </div>
-
-
+                <?php foreach ($posts as $post):?>
+                    <div class="row post">
+                        <div class="id col-1"><?=$post['id'];?></div>
+                        <div class="title col-5"><?=$post['title'];?></div>
+                        <div class="author col-2"><?=$post['id_user'];?></div>
+                        <div class="red col-1"><a href="edit.php?id=<?=$post['id'];?>">edit</a></div>
+                        <div class="del col-1"><a href="edit.php?del_id=<?=$post['id'];?>">delete</a></div>
+                        <div class="status col-2"><a href="">в черновик</a></div>
+                    </div>
+                <?php endforeach; ?>
             </div>
         </div>
     </div>

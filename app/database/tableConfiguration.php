@@ -11,4 +11,11 @@ $tableTopics = [
     'description' => ':desc'
 
 ];
+$tablePosts =['id_user'=> ':us',
+                'title' => ':tlt',
+                'content' => ':con',
+                'id_topic' => ':top',
+                'img' => ':im',
+               'status' => ':st'
+];
 

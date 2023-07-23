@@ -1,8 +1,9 @@
 
 <?php
 include_once 'path.php';
-include_once "app/database/db.php";
+
 include_once "app/controllers/topics.php";
+include_once "app/controllers/posts.php";
 include_once "app/include/header.php";
 
 ?>

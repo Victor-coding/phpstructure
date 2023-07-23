@@ -1,6 +1,6 @@
 <?php
 include_once '../../path.php';
-include_once "../../app/controllers/topics.php";
+include_once "../../app/controllers/posts.php";
 include_once "../../app/include/header-admin.php";
 
 ?>
@@ -33,7 +33,7 @@ include_once "../../app/include/header-admin.php";
                     </div>
 
                     <div class="col">
-                        <button name="topic-edit" class="btn btn-primary" type="submit">Обновить</button>
+                        <button name="post-edit" class="btn btn-primary" type="submit">Обновить</button>
                     </div>
 
                 </form>

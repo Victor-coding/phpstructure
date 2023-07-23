@@ -26,7 +26,7 @@ include_once "../../app/include/header-admin.php";
             </div>
             <?php foreach ($topics as $key => $topic):?>
             <div class="row post">
-                <div class="id col-1"><?=$key + 1?></div>
+                <div class="id col-1"><?=$topic['id'];?></div>
                 <div class="title col-5"><?=$topic['name']?></div>
                 <div class="red col-2"><a href="edit.php?id=<?=$topic['id'];?>">edit</a></div>
                 <div class="del col-2"><a href="edit.php?del_id=<?=$topic['id'];?>">delete</a></div>

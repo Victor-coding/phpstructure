@@ -3,7 +3,7 @@
 //подключение к MySQL
 $driver = 'mysql';
 $host = 'localhost';
-$port = 3305;
+$port = 3306;
 $db_name = 'phpstructure';
 $db_user = 'root';
 $db_pass = '';
