@@ -94,7 +94,20 @@ header ul li ul li a{
     background: #ffffff;
     color: #008489;
 }
+header ul li ul li a font{
+    padding: 10px;
+    background: #ffffff;
+    color: #008489;
+    padding-left: 0;
+    margin: 0;
 
+}
+header ul li ul li a font:hover{
+    background: #006669;
+    transition: 0.5s;
+    color: #ffffff;
+
+}
 /*
 Slider
  */

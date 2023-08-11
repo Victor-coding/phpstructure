@@ -35,14 +35,15 @@ if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_post'])){
             ];
 
             $isSubmit = true;
-            $id =insert('posts', $tablePosts, $post);
-        $post = selectOne('users', ['id' => $id]);
+            $post = insert('posts', $tablePosts, $post);
+            $post = selectOne('users', ['id' => $id]);
             header('location: ' . '/admin/posts/index.php');
 
     }
 }else {
     $title = '';
     $content = '';
+    $topic = '';
 }
 // Редактирование категории
 if($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['id'])){
