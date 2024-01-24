@@ -53,7 +53,7 @@ include_once "app/include/header.php";
             </button>
         </div>
     </div>
-    <!-- блок карусели end-->
+    <!-- блок карусели end -->
 
     <!-- блок main -->
     <div class="container">
